@@ -16,7 +16,7 @@ Here, you'll find a wide variety of accepted solutions — from Div. 3 beginner 
 Solutions are categorized and structured as:
 
 - 📁 **By Contest** – Folders named after contest IDs (e.g., `CF_Round_900`, `Edu_Round_150`)
-- 🧩 **By Difficulty** – Such as `800-1000/`, `1200-1400/`, etc.
+- 🧩 **By Difficulty** – Such as `800-1000/`, `1100-1300/`, etc.
 - ✏️ **By Topic (Optional)** – Like `Graphs/`, `Greedy/`, `DP/`, etc.
 
 ---
@@ -48,13 +48,6 @@ Solutions are categorized and structured as:
 
 ---
 
-## ⚠️ Disclaimer
-
-These are my personal solutions submitted on Codeforces.  
-They are intended for learning, reference, and self-review — not for direct copying during contests.
-
----
-
 ## 🤝 Contributing
 
 While this is a personal journey, if you’d like to:
@@ -73,8 +66,7 @@ While this is a personal journey, if you’d like to:
 - 🌐 Codolio Profile: [codolio.com/profile/mhdnazrul](https://codolio.com/profile/mhdnazrul)
 - 🧑‍💻 Codeforces: [mhdnazrul on Codeforces](https://codeforces.com/profile/mhdnazrul)
 
-[![Codeforces](https://img.shields.io/badge/Codeforces-Profile-orange?style=flat-square&logo=codeforces)](https://codeforces.com/profile/mhdnazrul)  
-[![Gmail](https://img.shields.io/badge/Email-mhdnazrul511@gmail.com-red?style=flat-square&logo=gmail)](mailto:mhdnazrul511@gmail.com)
+[![Codeforces](https://img.shields.io/badge/Codeforces-Profile-orange?style=flat-square&logo=codeforces)](https://codeforces.com/profile/mhdnazrul)  [![Gmail](https://img.shields.io/badge/Email-mhdnazrul511@gmail.com-red?style=flat-square&logo=gmail)](mailto:mhdnazrul511@gmail.com)
 
 ---
 
