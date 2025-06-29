@@ -10,6 +10,7 @@
 .idea/
 
 # Backup or temporary folders
+cph/
 temp/
 Others/
 others/
