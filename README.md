@@ -1,4 +1,5 @@
 # MY CodeForces Journey 🚀
+![MY CodeForces Journey cover photo](https://github.com/user-attachments/assets/30180da8-a09b-4374-9223-490ae4b59b84)
 
 [![Codeforces Profile](https://img.shields.io/badge/Codeforces-Profile-orange?style=for-the-badge&logo=codeforces)](https://codeforces.com/profile/mhdnazrul)  
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/mhdnazrul/my-codeforces-journey?style=for-the-badge&logo=github)](https://github.com/mhdnazrul/my-codeforces-journey/commits/main)  
