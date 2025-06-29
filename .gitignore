@@ -1,0 +1,26 @@
+# Executable and object files
+*.exe
+*.o
+*.out
+*.cph
+*.prob
+
+# VS Code and IDE folders
+.vscode/
+.idea/
+
+# Backup or temporary folders
+temp/
+Others/
+others/
+cp_temp/
+test/
+build/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# C++ generated debug/log files
+*.log
+*.stackdump
