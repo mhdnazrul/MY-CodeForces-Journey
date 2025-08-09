@@ -7,7 +7,7 @@ int main()
   int a, b, c;
   std::cin >> a >> b >> c;
 
-  std::vector<int> nums = {a, b, c};
+  std::vi<int> nums = {a, b, c};
   std::sort(nums.begin(), nums.end());
 
   // First Output: Ascending order

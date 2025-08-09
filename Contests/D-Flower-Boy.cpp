@@ -4,9 +4,9 @@
 
 using namespace std;
 
-bool can_collect_dp(int m, int n, const vector<int> &a, const vector<int> &b)
+bool can_collect_dp(int m, int n, const vi<int> &a, const vi<int> &b)
 {
-  vector<vector<bool>> dp(n + 1, vector<bool>(m + 1, false));
+  vi<vi<bool>> dp(n + 1, vi<bool>(m + 1, false));
   dp[0][0] = true;
   for (int i = 1; i <= n; ++i)
   {
@@ -23,11 +23,11 @@ bool can_collect_dp(int m, int n, const vector<int> &a, const vector<int> &b)
   return dp[n][m];
 }
 
-bool can_collect_with_k_dp(int k, int m, int n, const vector<int> &a, const vector<int> &b)
+bool can_collect_with_k_dp(int k, int m, int n, const vi<int> &a, const vi<int> &b)
 {
   for (int p = 0; p <= n; ++p)
   {
-    vector<int> temp_a;
+    vi<int> temp_a;
     for (int i = 0; i < p; ++i)
       temp_a.push_back(a[i]);
     temp_a.push_back(k);
@@ -44,12 +44,12 @@ int solve()
 {
   int n, m;
   cin >> n >> m;
-  vector<int> a(n);
+  vi<int> a(n);
   for (int i = 0; i < n; ++i)
   {
     cin >> a[i];
   }
-  vector<int> b(m);
+  vi<int> b(m);
   for (int i = 0; i < m; ++i)
   {
     cin >> b[i];

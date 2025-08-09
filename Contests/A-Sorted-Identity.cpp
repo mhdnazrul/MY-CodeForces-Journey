@@ -4,8 +4,8 @@ using namespace std;
   ios::sync_with_stdio(false); \
   cin.tie(nullptr);
 using ll = long long;
-using vi = vector<int>;
-using vll = vector<ll>;
+using vi = vi<int>;
+using vll = vi<ll>;
 const ll mod = 1e9 + 7;
 
 void solve()

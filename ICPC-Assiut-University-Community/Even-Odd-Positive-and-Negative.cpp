@@ -7,7 +7,7 @@ void solve()
 {
   int t;
   cin >> t;
-  vector<int> n(t);
+  vi<int> n(t);
   for (int i = 0; i < t; ++i)
   {
     cin >> n[i];

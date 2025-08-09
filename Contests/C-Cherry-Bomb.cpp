@@ -12,7 +12,7 @@ void solve()
     int n;
     long long k;
     cin >> n >> k;
-    vector<long long> a(n), b(n);
+    vi<long long> a(n), b(n);
     for (int i = 0; i < n; ++i)
       cin >> a[i];
     for (int i = 0; i < n; ++i)

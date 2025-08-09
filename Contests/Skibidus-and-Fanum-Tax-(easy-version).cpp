@@ -6,7 +6,7 @@ using namespace std;
     ios::sync_with_stdio(false); \
     cin.tie(nullptr);
 using ll = long long;
-using vll = vector<ll>;
+using vll = vi<ll>;
 
 bool solve()
 {

@@ -5,7 +5,7 @@ using namespace std;
 
 void solve(int n, int x)
 {
-  vector<int> result;
+  vi<int> result;
   for (int i = x - 1; i >= 0; --i)
     result.push_back(i);
   for (int i = n - 1; i > x; --i)

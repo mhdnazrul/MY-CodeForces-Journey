@@ -24,4 +24,4 @@ Thumbs.db
 
 # C++ generated debug/log files
 *.log
-*.stackdump
+*.stackdump  

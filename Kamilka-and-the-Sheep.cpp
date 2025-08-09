@@ -4,21 +4,26 @@
 #include <numeric>
 using namespace std;
 
-int main() {
+int main()
+{
     int t;
     cin >> t;
-    while (t--) {
+    while (t--)
+    {
         int n;
         cin >> n;
-        vector<int> a(n);
+        vi<int> a(n);
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
+        {
             cin >> a[i];
         }
 
         int maxGCD = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = i + 1; j < n; j++) {
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = i + 1; j < n; j++)
+            {
                 int diff = abs(a[i] - a[j]);
                 maxGCD = max(maxGCD, diff);
             }
