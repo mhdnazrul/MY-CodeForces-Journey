@@ -4,7 +4,6 @@ using namespace std;
 int main()
 {
     int n;cin>>n;
-    //vector<string> str(n);
     int cnt = 0;
     while(n--){
         string str;cin>>str;
@@ -14,4 +13,5 @@ int main()
         }
     }
     cout<<cnt<<endl;
+    return 0;
 }
