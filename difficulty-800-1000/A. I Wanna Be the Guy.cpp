@@ -1,0 +1,39 @@
+// https://codeforces.com/problemset/problem/469/A
+// Nazrul Islam
+#include <bits/stdc++.h>
+using namespace std;
+#define FAST_IO               \
+ ios::sync_with_stdio(false); \
+ cin.tie(nullptr);
+using ll = long long;
+using vi = vector<int>;
+using vll = vector<ll>;
+const ll mod = 1e9 + 7;
+
+void solve()
+{
+ int p, q;
+ cin >> p >> q;
+ int Xmax=0,Ymax=0;
+ for (int i = 0; i < q ; i++)
+ {
+  int t;
+  cin >> t;
+  Xmax = max(Xmax, t);
+ }
+ for (int i = 0; i < q ; i++)
+ {
+  int t;
+  cin >> t;
+  Ymax = max(Ymax, t);
+ }
+ cout << (Xmax<Ymax ? "I become the guy.\n" : "Oh, my keyboard!\n");
+}
+
+int main()
+{
+ FAST_IO;
+ // int T; cin >> T;while(T--)
+ solve();
+ return 0;
+}
