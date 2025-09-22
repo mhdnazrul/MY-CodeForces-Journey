@@ -1,0 +1,40 @@
+// https://codeforces.com/problemset/problem/1030/A
+// Nazrul Islam
+#include <bits/stdc++.h>
+using namespace std;
+#define FAST_IO               \
+ ios::sync_with_stdio(false); \
+ cin.tie(nullptr);
+using ll = long long;
+using vi = vector<int>;
+using vll = vector<ll>;
+const ll mod = 1e9 + 7;
+
+void solve()
+{
+ int n;
+ cin >> n;
+ bool flag = false;
+ for (int i = 0; i < n; ++i)
+ {
+  int t;
+  cin >> t;
+  if (t == 1)
+  {
+   flag = true;
+   break;
+  }
+ }
+ if (flag)
+  cout << "HARD\n";
+ else
+  cout << "EASY\n";
+}
+
+int main()
+{
+ FAST_IO;
+ // int T; cin >> T;while(T--)
+ solve();
+ return 0;
+}
