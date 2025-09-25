@@ -12,28 +12,33 @@ const ll mod = 1e9 + 7;
 
 void solve()
 {
- int p, q;
- cin >> p >> q;
- int Xmax=0,Ymax=0;
- for (int i = 0; i < q ; i++)
+ int n, p, q, tp;
+ cin >> n >> p;
+ vi v(n + 1, 0);
+ for (int i = 0; i < p; i++)
  {
-  int t;
-  cin >> t;
-  Xmax = max(Xmax, t);
+  cin >> tp;
+  v[tp]++;
  }
- for (int i = 0; i < q ; i++)
+
+ cin >> q;
+ for (int i = 0; i < q; i++)
  {
-  int t;
-  cin >> t;
-  Ymax = max(Ymax, t);
+  cin >> tp;
+  v[tp]++;
  }
- cout << (Xmax<Ymax ? "I become the guy.\n" : "Oh, my keyboard!\n");
+ bool ans = true;
+ for (int i = 1; i <= n; i++)
+ {
+  if (v[i] == 0)
+   ans = false;
+ }
+ cout << (ans ? "I become the guy.\n" : "Oh, my keyboard!\n");
 }
 
 int main()
 {
  FAST_IO;
- // int T; cin >> T;while(T--)
  solve();
  return 0;
 }
