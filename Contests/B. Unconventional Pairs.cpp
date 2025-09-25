@@ -1,5 +1,5 @@
-// https://codeforces.com/contest/2149/problem/D
-// Nazrul Islam
+// https://codeforces.com/contest/2149/problem/B
+//Nazrul Islam
 #include <bits/stdc++.h>
 using namespace std;
 #define FAST_IO               \
@@ -12,18 +12,19 @@ const ll mod = 1e9 + 7;
 
 void solve()
 {
- int n, cnt_a = 0, cnt_b = 0, ans = 0;
- string s;
- cin >> n >> s;
+ int n;
+ cin >> n;
+ vi v(n);
  for (int i = 0; i < n; i++)
+  cin >> v[i];
+ sort(v.begin(), v.end());
+ int MAX_cnt = 0;
+ for (int i = 0; i < n - 1; i += 2)
  {
-  if (s[i] == 'a')
-   cnt_a++;
-  else if (s[i] == 'b')
-   cnt_b++;
+  int d = abs(v[i + 1] - v[i]);
+  MAX_cnt = max(MAX_cnt, d);
  }
- ans = max(0, min(cnt_a, cnt_b)-1);
- cout << ans << endl;
+ cout << MAX_cnt << endl;
 }
 
 int main()
