@@ -1,5 +1,4 @@
-// https://codeforces.com/contest/2149/problem/D
-// Nazrul Islam
+// https://codeforces.com/contest/2149/problem/C
 #include <bits/stdc++.h>
 using namespace std;
 #define FAST_IO               \
@@ -12,18 +11,23 @@ const ll mod = 1e9 + 7;
 
 void solve()
 {
- int n, cnt_a = 0, cnt_b = 0, ans = 0;
- string s;
- cin >> n >> s;
+ int n, k, MEX = 0;
+ cin >> n >> k;
+ vi V(n + 1, 0);
  for (int i = 0; i < n; i++)
  {
-  if (s[i] == 'a')
-   cnt_a++;
-  else if (s[i] == 'b')
-   cnt_b++;
+  int tp;
+  cin >> tp;
+  if (tp <= n)
+   V[tp]++;
  }
- ans = max(0, min(cnt_a, cnt_b)-1);
- cout << ans << endl;
+ int cnt_zero = 0;
+ for (int i = 0; i < k;i++){
+  if(V[i]==0)
+   cnt_zero++;
+ }
+ MEX = max(cnt_zero, V[k]);
+ cout << MEX << endl;
 }
 
 int main()

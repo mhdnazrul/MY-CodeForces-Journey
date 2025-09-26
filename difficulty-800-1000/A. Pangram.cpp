@@ -1,5 +1,4 @@
-// https://codeforces.com/contest/2149/problem/D
-// Nazrul Islam
+// https://codeforces.com/problemset/problem/520/A
 #include <bits/stdc++.h>
 using namespace std;
 #define FAST_IO               \
@@ -12,26 +11,24 @@ const ll mod = 1e9 + 7;
 
 void solve()
 {
- int n, cnt_a = 0, cnt_b = 0, ans = 0;
- string s;
- cin >> n >> s;
+ int n;
+ cin >> n;
+ string str;
+ cin >> str;
+ set<char> ch;
+ int cnt_low = 0, cnt_up = 0;
  for (int i = 0; i < n; i++)
  {
-  if (s[i] == 'a')
-   cnt_a++;
-  else if (s[i] == 'b')
-   cnt_b++;
+  char c = tolower(str[i]);
+  ch.insert(c);
  }
- ans = max(0, min(cnt_a, cnt_b)-1);
- cout << ans << endl;
+ cout << (ch.size()>=26 ? "YES\n" : "NO\n");
 }
 
 int main()
 {
  FAST_IO;
- int T;
- cin >> T;
- while (T--)
-  solve();
+ // int T; cin >> T;while(T--)
+ solve();
  return 0;
 }

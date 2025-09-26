@@ -1,4 +1,4 @@
-// https://codeforces.com/contest/2149/problem/D
+// https://codeforces.com/contest/2149/problem/A
 // Nazrul Islam
 #include <bits/stdc++.h>
 using namespace std;
@@ -12,17 +12,20 @@ const ll mod = 1e9 + 7;
 
 void solve()
 {
- int n, cnt_a = 0, cnt_b = 0, ans = 0;
- string s;
- cin >> n >> s;
+ int n;
+ cin >> n;
+ vi v(n);
+ int neg = 0, ans = 0;
  for (int i = 0; i < n; i++)
  {
-  if (s[i] == 'a')
-   cnt_a++;
-  else if (s[i] == 'b')
-   cnt_b++;
+  cin >> v[i];
+  if (v[i] < 0)
+   neg++;
+  else if (v[i] == 0)
+   ans++;
  }
- ans = max(0, min(cnt_a, cnt_b)-1);
+ if (neg % 2 != 0)
+  ans += 2;
  cout << ans << endl;
 }
 
