@@ -1,17 +1,13 @@
 // https://codeforces.com/problemset/problem/200/B
-// Nazrul Islam
+// nazrulislam_7
 #include <bits/stdc++.h>
 using namespace std;
 #define FAST_IO               \
  ios::sync_with_stdio(false); \
  cin.tie(nullptr);
-using ll = long long;
-using vi = vector<int>;
-using vll = vector<ll>;
-const ll mod = 1e9 + 7;
-
 void solve()
 {
+ cout << fixed << setprecision(12);
  double n, total = 0;
  cin >> n;
  for (int i = 0; i < n; ++i)
@@ -20,10 +16,7 @@ void solve()
   cin >> t;
   total += t;
  }
- double ans = total / n;
- cout << fixed << setprecision(12);
-
- cout << ans << endl;
+ cout << total / n << endl;
 }
 
 int main()

@@ -1,10 +1,10 @@
-// https://codeforces.com/contest/2149/problem/D
-// Nazrul Islam
+//
+// nazrulislam_7
 #include <bits/stdc++.h>
 using namespace std;
-#define FAST_IO               \
- ios::sync_with_stdio(false); \
- cin.tie(nullptr);
+#define FAST_IO                \
+  ios::sync_with_stdio(false); \
+  cin.tie(nullptr);
 using ll = long long;
 using vi = vector<int>;
 using vll = vector<ll>;
@@ -12,26 +12,29 @@ const ll mod = 1e9 + 7;
 
 void solve()
 {
- int n, cnt_a = 0, cnt_b = 0, ans = 0;
- string s;
- cin >> n >> s;
- for (int i = 0; i < n; i++)
- {
-  if (s[i] == 'a')
-   cnt_a++;
-  else if (s[i] == 'b')
-   cnt_b++;
- }
- ans = max(0, min(cnt_a, cnt_b)-1);
- cout << ans << endl;
+  int n;
+  cin >> n;
+  int ans = 0;
+  while (n--)
+  {
+    string s;
+    cin >> s;
+    int ln = s.size();
+    for (int i = 1; i < ln; i++)
+    {
+      if (s[i] == '-' && s[i - 1] == '-')
+        ans >> 1;
+      else if (s[i] == '+' && s[i - 1] == '+')
+        ans << 1;
+    }
+  }
+  cout << ans << endl;
 }
 
 int main()
 {
- FAST_IO;
- int T;
- cin >> T;
- while (T--)
+  FAST_IO;
+  // int T; cin >> T;while(T--)
   solve();
- return 0;
+  return 0;
 }

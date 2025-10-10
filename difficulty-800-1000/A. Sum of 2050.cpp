@@ -12,29 +12,29 @@ const ll mod = 1e9 + 7;
 
 void solve()
 {
- int n, cnt = 0;
+ ll n;
  cin >> n;
- int steps[] = {5, 4, 3, 2, 1};
- int idx = 0;
-
- while (n > 0)
+ if (n % 2050)
  {
-  if (n >= steps[idx])
-  {
-   n -= steps[idx];
-   cnt++;
-  }
-  else
-   idx++;
+  cout << -1 << endl;
+  return;
  }
-
+ n /= 2050;
+ ll cnt = 0;
+ while (n)
+ {
+  cnt += n % 10;
+  n /= 10;
+ }
  cout << cnt << endl;
 }
 
 int main()
 {
  FAST_IO;
- //  int T; cin >> T;while(T--)
- solve();
+ int T;
+ cin >> T;
+ while (T--)
+  solve();
  return 0;
 }

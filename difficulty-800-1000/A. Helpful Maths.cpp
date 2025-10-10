@@ -1,5 +1,5 @@
 // https://codeforces.com/problemset/problem/339/A
-// Nazrul Islam
+// nazrulislam_7
 #include <bits/stdc++.h>
 using namespace std;
 #define FAST_IO               \
@@ -31,7 +31,7 @@ void solve()
  for (int i = 0; i < num.size(); ++i)
  {
   cout << num[i];
-  cout<<(i<num.size()-1?"+":"");
+  cout << (i < num.size() - 1 ? "+" : "");
  }
  cout << endl;
 }
