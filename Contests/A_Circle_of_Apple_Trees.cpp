@@ -1,4 +1,4 @@
-// https://codeforces.com/problemset/problem/1328/A
+// https://codeforces.com/contest/2153/problem/A
 // nazrulislam_7
 #include <bits/stdc++.h>
 using namespace std;
@@ -12,22 +12,24 @@ const ll mod = 1e9 + 7;
 
 void solve()
 {
- int a, b;
- cin >> a >> b;
- if (a % b == 0)
+ int n;
+ cin >> n;
+ vi cnt(n + 1);
+ for (int i = 1; i <= n; i++)
  {
-  cout << 0 << endl;
-  return;
+  int x;
+  cin >> x;
+  cnt[x]++;
  }
- else if (a > b)
+ int ans = 0;
+ for (int i = 1; i <= n; i++)
  {
-  int div = a / b;
-  int next_b = b * (div + 1);
-  cout << next_b - a << endl;
+  if (cnt[i] >= 1)
+   ans++;
  }
- else
-  cout << b - a << endl;
+ cout << ans << endl;
 }
+
 int main()
 {
  FAST_IO;

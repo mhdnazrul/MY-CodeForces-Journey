@@ -1,5 +1,5 @@
 // https://codeforces.com/problemset/problem/158/A
-// Nazrul Islam
+// nazrulislam_7
 #include <bits/stdc++.h>
 using namespace std;
 #define FAST_IO                  \
@@ -14,13 +14,13 @@ void solve()
 {
     int n, k;
     cin >> n >> k;
-    vi points(n);
+    vi V(n);
     for (int i = 0; i < n; ++i)
-        cin >> points[i];
-    int cnt = 0, Flag = points[k - 1];
-    for (int j : points)
+        cin >> V[i];
+    int cnt = 0, store = V[k - 1];
+    for (int j : V)
     {
-        if (j > 0 && j >= Flag)
+        if (j > 0 && j >= store)
             cnt++;
     }
     cout << cnt << endl;
