@@ -1,5 +1,5 @@
 // https://codeforces.com/problemset/problem/41/A
-//Nazrul Islam
+// nazrulislam_7
 #include <bits/stdc++.h>
 using namespace std;
 #define FAST_IO ios::sync_with_stdio(false); cin.tie(nullptr);

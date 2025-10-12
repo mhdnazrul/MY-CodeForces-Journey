@@ -1,5 +1,5 @@
 // https://codeforces.com/contest/2145/problem/A
-// Nazrul Islam
+// nazrulislam_7
 #include <bits/stdc++.h>
 using namespace std;
 #define FAST_IO               \
@@ -12,10 +12,9 @@ const ll mod = 1e9 + 7;
 
 void solve()
 {
- int n;
- cin >> n;
- int ans = (3 - n % 3) % 3;
- cout << ans << '\n';
+ int nums;
+ cin >> nums;
+ cout << (3 - nums % 3) % 3 << '\n';
 }
 
 int main()
