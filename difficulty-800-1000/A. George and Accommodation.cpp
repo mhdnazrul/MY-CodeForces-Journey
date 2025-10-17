@@ -1,24 +1,17 @@
-// https://codeforces.com/problemset/problem/467/A
-// Nazrul Islam
+// problem link:https://codeforces.com/problemset/problem/467/A
+// Author: cf handle: nazrulislam_7
 #include <bits/stdc++.h>
 using namespace std;
-#define FAST_IO               \
- ios::sync_with_stdio(false); \
- cin.tie(nullptr);
-using ll = long long;
-using vi = vector<int>;
-using vll = vector<ll>;
-const ll mod = 1e9 + 7;
-
+#define fast_io ios_base::sync_with_stdio(false); cin.tie(nullptr);
 void solve()
 {
  int n, cnt = 0;
  cin >> n;
  while (n--)
  {
-  int p, g;
-  cin >> p >> g;
-  if (p <= g-2)
+  int a, b;
+  cin >> a >> b;
+  if (a <= b-2)
    cnt++;
  }
  cout << cnt << endl;
@@ -26,7 +19,7 @@ void solve()
 
 int main()
 {
- FAST_IO;
+ fast_io;
  // int T; cin >> T;while(T--)
  solve();
  return 0;
