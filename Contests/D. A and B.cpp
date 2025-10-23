@@ -1,42 +1,42 @@
-// https://codeforces.com/contest/2149/problem/D
-// Nazrul Islam
+// problem link:https://codeforces.com/contest/2149/problem/D
+// Author ~ cf handle: nazrulislam_7
 #include <bits/stdc++.h>
 using namespace std;
-#define FAST_IO               \
- ios::sync_with_stdio(false); \
- cin.tie(nullptr);
 using ll = long long;
-using vi = vector<int>;
-using vll = vector<ll>;
-const ll mod = 1e9 + 7;
-
-void solve()
-{
- int n, cnt_a = 0, cnt_b = 0;
- string str;
- cin >> n >> str;
- vi a(0, 0), b(0, 0);
- for (int i = 0; i < n; i++)
- {
-  if (str[i] == 'a')
-   a.push_back(str[i]);
-  else
-   b.push_back(str[i]);
- }
- cnt_a = a.size() - 1, cnt_b = b.size() - 1;
- int ans = min(cnt_a, cnt_b);
- if (ans <= 0)
-  cout << 0 << endl;
- else
-  cout << ans << endl;
+#define nl '\n'
+#define all(vec) (vec).begin(), (vec).end()
+#define rall(vec) (vec).rbegin(), (vec).rend()
+template<class T> void readV(vector<T>& v) { for(auto &x : v) cin >> x; }
+template<class T> void printV(const vector<T>& v) { for(auto x : v) cout << x << ' '; cout << '\n'; }
+ll GET_val_V(vector<int> v){
+  if(v.empty())return 0;
+  ll idx = (ll)v.size() / 2;
+  ll val = 0;
+  for(int i=0; i<v.size();i++){
+    val += abs(v[idx] - v[i]) - abs(idx-i);
+  }
+  return val;
+}
+void solve() {
+    ll n; cin>>n;
+    vector<int>a,b;
+    for(int i=1; i<=n; i++){
+      char ch;  cin>>ch;
+      if(ch=='a')a.push_back(i);
+      else b.push_back(i);
+    }
+    ll val_of_A = GET_val_V(a);
+    ll val_of_B = GET_val_V(b);
+    cout<<min(val_of_A, val_of_B)<<nl;
 }
 
-int main()
-{
- FAST_IO;
- int T;
- cin >> T;
- while (T--)
-  solve();
- return 0;
+int32_t main() {
+    ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    int test_cases = 1;
+    cin >> test_cases;
+    for(int tc = 1; tc <= test_cases; tc++){
+    //  cout << "Case #" << tc << ": ";
+        solve();
+    }
+    return 0;
 }

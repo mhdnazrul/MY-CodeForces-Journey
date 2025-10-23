@@ -1,4 +1,4 @@
-// problem link:https://codeforces.com/problemset/problem/1498/A
+// problem link:
 // Author ~ cf handle: nazrulislam_7
 #include <bits/stdc++.h>
 using namespace std;
@@ -17,23 +17,18 @@ const ll MOD = 1e9 + 7;const ll INF = 1e18;
 #define endl '\n'
 template<class T> void readV(vector<T>& v) { for(auto &x : v) cin >> x; }
 template<class T> void printV(const vector<T>& v) { for(auto x : v) cout << x << ' '; cout << '\n'; }
-long long digitSum(ll n) {
-    int sum = 0;
-    while (n) sum += n % 10, n /= 10;
-    return sum;
-}
 
 void solve() {
-    ll n;
-    cin >> n;
-    while (__gcd(n, digitSum(n)) == 1) ++n;
-    cout << n << '\n';
+    ll A,B,C,D;
+    cin>>A>>B>>C>>D;
+    ll X = (A*B)-(C*D);
+    cout<< "Difference = "<< X <<endl;
 }
 
 int32_t main() {
     ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
     int test_cases = 1;
-    cin >> test_cases;
+    //cin >> test_cases;
     for(int tc = 1; tc <= test_cases; tc++){
     //  cout << "Case #" << tc << ": ";
         solve();

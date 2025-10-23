@@ -1,4 +1,4 @@
-// problem link:https://codeforces.com/problemset/problem/1498/A
+// problem link:https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/C
 // Author ~ cf handle: nazrulislam_7
 #include <bits/stdc++.h>
 using namespace std;
@@ -17,23 +17,21 @@ const ll MOD = 1e9 + 7;const ll INF = 1e18;
 #define endl '\n'
 template<class T> void readV(vector<T>& v) { for(auto &x : v) cin >> x; }
 template<class T> void printV(const vector<T>& v) { for(auto x : v) cout << x << ' '; cout << '\n'; }
-long long digitSum(ll n) {
-    int sum = 0;
-    while (n) sum += n % 10, n /= 10;
-    return sum;
-}
 
 void solve() {
-    ll n;
-    cin >> n;
-    while (__gcd(n, digitSum(n)) == 1) ++n;
-    cout << n << '\n';
+    ll a,b;    cin>>a>>b;
+    ll sum = a+b;
+    ll multi = a*b;
+    ll sub = a-b;
+    cout<<a<<" + "<<b<<" = "<<sum<<endl;
+    cout<<a<<" * "<<b<<" = "<<multi<<endl;
+    cout<<a<<" - "<<b<<" = "<<sub<<endl;
 }
 
 int32_t main() {
     ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
     int test_cases = 1;
-    cin >> test_cases;
+    //cin >> test_cases;
     for(int tc = 1; tc <= test_cases; tc++){
     //  cout << "Case #" << tc << ": ";
         solve();

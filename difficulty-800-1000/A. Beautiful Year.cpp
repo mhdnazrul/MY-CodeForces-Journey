@@ -1,5 +1,5 @@
 // https://codeforces.com/problemset/problem/271/A
-// Nazrul Islam
+// nazrulislam_7
 #include <bits/stdc++.h>
 using namespace std;
 #define FAST_IO               \
@@ -14,23 +14,19 @@ void solve()
 {
  int n;
  cin >> n;
- while (1)
+ while (true)
  {
   n++;
+  set<int> st;
   string s = to_string(n);
-  set<char> sc;
   for (int i = 0; i < 4; ++i)
-  {
-   sc.insert(s[i]);
-  }
-  if (sc.size() == 4)
+   st.insert(s[i]);
+  if (st.size() == 4)
    break;
   else
-  {
    n = stoi(s);
-  }
  }
- cout << n<< endl;
+ cout << n << endl;
 }
 
 int main()
