@@ -1,45 +1,4 @@
-// // https://codeforces.com/problemset/problem/996/A
-// // Nazrul Islam
-// #include <bits/stdc++.h>
-// using namespace std;
-// #define FAST_IO               \
-//  ios::sync_with_stdio(false); \
-//  cin.tie(nullptr);
-// using ll = long long;
-// using vi = vector<int>;
-// using vll = vector<ll>;
-// const ll mod = 1e9 + 7;
-
-// void solve()
-// {
-//  int n, tp, cnt = 0;
-//  cin >> n;
-//  while (n > 0)
-//  {
-//   cnt++;
-//   if (n >= 100)
-//    n -= 100;
-//   else if (n >= 20)
-//    n -= 20;
-//   else if (n >= 10)
-//    n -= 10;
-//   else if (n >= 5)
-//    n -= 5;
-//   else if (n >= 1)
-//    n -= 1;
-//  }
-//  cout << cnt << endl;
-// }
-
-// int main()
-// {
-//  FAST_IO;
-//  // int T; cin >> T;while(T--)
-//  solve();
-//  return 0;
-// }
-
-// problem link:https://codeforces.com/problemset/problem/996/A
+// problem link:https://codeforces.com/contest/2154/problem/A
 // Author ~ cf handle: nazrulislam_7
 #include <bits/stdc++.h>
 using namespace std;
@@ -60,23 +19,76 @@ template<class T> void readV(vector<T>& v) { for(auto &x : v) cin >> x; }
 template<class T> void printV(const vector<T>& v) { for(auto x : v) cout << x << ' '; cout << '\n'; }
 
 void solve() {
-    int n;  cin>>n;
-    int arr[5] = {100,20,10,5,1};
-    int cnt = 0;
-    for(int i=0;i<5;i++){
-        cnt += n/arr[i];
-        n %=arr[i];
+    int n, k;
+    cin >> n >> k;
+    string s;
+    cin >> s;
+
+    int ans = 0;
+    int low_idx = -1e9; 
+
+    for (int i = 0; i < n; ++i) {
+        if (s[i] == '1') {
+            if (low_idx < i - k + 1) {
+                ans++;
+                low_idx = i;
+            } else {
+                low_idx = i;
+            }
+        }
     }
-    cout<<cnt<<endl;
+    cout << ans << "\n";
 }
 
 int32_t main() {
     ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
     int test_cases = 1;
-    //cin >> test_cases;
+    cin >> test_cases;
     for(int tc = 1; tc <= test_cases; tc++){
     //  cout << "Case #" << tc << ": ";
         solve();
     }
     return 0;
-} 
+}
+
+
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+ll gcd(ll a, ll b)
+{
+	if (a == 0)
+		return b;
+	gcd(b % a, a);
+}
+
+ll lcm(ll a, ll b)
+{
+	return (a*b) / gcd(a, b);
+}
+
+int main()
+{
+	int n;
+	cin >> n;
+	int arr[5] = {0};
+	for (int i = 0; i < n; i++)
+	{
+		int d;
+		cin >> d;
+		arr[d]++;
+	}
+	int c = 0;
+	c = arr[4] + arr[3];
+	arr[1] -= arr[3];
+	c += arr[2] / 2;
+	if (arr[2] % 2)
+	{
+		c++;
+		arr[1] -= 2;
+	}
+	if (arr[1] > 0)
+		c += arr[1] / 4 + (arr[1] % 4 != 0);
+	cout << c << endl;
+}
