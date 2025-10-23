@@ -1,45 +1,4 @@
-// // https://codeforces.com/problemset/problem/996/A
-// // Nazrul Islam
-// #include <bits/stdc++.h>
-// using namespace std;
-// #define FAST_IO               \
-//  ios::sync_with_stdio(false); \
-//  cin.tie(nullptr);
-// using ll = long long;
-// using vi = vector<int>;
-// using vll = vector<ll>;
-// const ll mod = 1e9 + 7;
-
-// void solve()
-// {
-//  int n, tp, cnt = 0;
-//  cin >> n;
-//  while (n > 0)
-//  {
-//   cnt++;
-//   if (n >= 100)
-//    n -= 100;
-//   else if (n >= 20)
-//    n -= 20;
-//   else if (n >= 10)
-//    n -= 10;
-//   else if (n >= 5)
-//    n -= 5;
-//   else if (n >= 1)
-//    n -= 1;
-//  }
-//  cout << cnt << endl;
-// }
-
-// int main()
-// {
-//  FAST_IO;
-//  // int T; cin >> T;while(T--)
-//  solve();
-//  return 0;
-// }
-
-// problem link:https://codeforces.com/problemset/problem/996/A
+// problem link:https://codeforces.com/problemset/problem/158/B
 // Author ~ cf handle: nazrulislam_7
 #include <bits/stdc++.h>
 using namespace std;
@@ -60,14 +19,27 @@ template<class T> void readV(vector<T>& v) { for(auto &x : v) cin >> x; }
 template<class T> void printV(const vector<T>& v) { for(auto x : v) cout << x << ' '; cout << '\n'; }
 
 void solve() {
-    int n;  cin>>n;
-    int arr[5] = {100,20,10,5,1};
-    int cnt = 0;
-    for(int i=0;i<5;i++){
-        cnt += n/arr[i];
-        n %=arr[i];
-    }
-    cout<<cnt<<endl;
+    int n;
+	cin >> n;
+	vi vec(5,0);
+	for (int i = 0; i < n; i++)
+	{
+		int x;  cin >> x;
+		vec[x]++;
+	}
+
+	int taxi = 0;
+	taxi = vec[4] + vec[3];
+	vec[1] -= vec[3];
+	taxi += vec[2] / 2;
+	if (vec[2] % 2)
+	{
+		taxi++;
+		vec[1] -= 2;
+	}
+	if (vec[1] > 0)
+		taxi += vec[1] / 4 + (vec[1] % 4 != 0);
+	cout << taxi << endl;
 }
 
 int32_t main() {
@@ -79,4 +51,4 @@ int32_t main() {
         solve();
     }
     return 0;
-} 
+}

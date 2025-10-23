@@ -1,4 +1,4 @@
-// problem link:https://codeforces.com/problemset/problem/344/A
+// problem link:https://codeforces.com/problemset/problem/118/A
 // Author ~ cf handle: nazrulislam_7
 #include <bits/stdc++.h>
 using namespace std;
@@ -20,14 +20,14 @@ template<class T> void readV(vector<T>& v) { for(auto &x : v) cin >> x; }
 template<class T> void printV(const vector<T>& v) { for(auto x : v) cout << x << ' '; cout << '\n'; }
 
 void solve() {
-    int n;  cin>>n;
-    vector<string> v(n);
-    readV(v);
-    int cnt=1;
-    for(int i=1;i<n;i++){
-        if(v[i]!=v[i-1])cnt++;
+    string s;cin>>s;
+    string ans = "";
+    string txt = "aoyeuiAOUYEUI";
+    for(int i = 0;i<s.size();i++){
+        int f = *find(sortV(txt),s[i]);
+        if(f==0) ans+=".", ans+=tolower(s[i]);
     }
-    cout<<cnt<<endl;
+    cout << ans<<endl;
 }
 
 int32_t main() {

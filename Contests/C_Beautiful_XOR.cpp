@@ -1,4 +1,4 @@
-// problem link:https://codeforces.com/problemset/problem/344/A
+// problem link:https://codeforces.com/contest/2162/problem/C
 // Author ~ cf handle: nazrulislam_7
 #include <bits/stdc++.h>
 using namespace std;
@@ -20,19 +20,33 @@ template<class T> void readV(vector<T>& v) { for(auto &x : v) cin >> x; }
 template<class T> void printV(const vector<T>& v) { for(auto x : v) cout << x << ' '; cout << '\n'; }
 
 void solve() {
-    int n;  cin>>n;
-    vector<string> v(n);
-    readV(v);
-    int cnt=1;
-    for(int i=1;i<n;i++){
-        if(v[i]!=v[i-1])cnt++;
-    }
-    cout<<cnt<<endl;
+    int a,b;    cin>>a>>b;
+    if(__builtin_clz(a) > __builtin_clz(b))
+        cout << "-1\n";
+    else if(a == b)
+        cout << "0\n";
+    else{
+        vi v;
+        for(int i = 0; i < 31; i++){
+            int x = (1 << i);
+            if(x <= a && (a & x) == 0)
+                a += x, v.push_back(x);
+        }
+        for(int i = 0; i < 31; i++){
+            int x = (1 << i);
+            if(x <= a && (b & x) == 0)
+                 v.push_back(x);
+        }
+        cout << v.size() << '\n';
+        for(auto z : v) 
+            cout << z << ' ';
+        cout << '\n';
+        }
 }
 
 int32_t main() {
     fast_io;
-    //int T; cin >> T;while(T--)
+    int T; cin >> T;while(T--)
                          solve();
     return 0;
 }
