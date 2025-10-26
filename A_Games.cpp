@@ -1,4 +1,4 @@
-// problem link:https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/M
+// problem link:https://codeforces.com/problemset/problem/268/A
 // Author ~ cf handle: nazrulislam_7
 #include <bits/stdc++.h>
 using namespace std;
@@ -10,14 +10,13 @@ template<class T> void readV(vector<T>& v) { for(auto &x : v) cin >> x; }
 template<class T> void printV(const vector<T>& v) { for(auto x : v) cout << x << ' '; cout << '\n'; }
 
 void solve() {
-    char ch;  cin>>ch;
-    int s=ch;
-    if(s>=65 && s<=90)
-        cout<<"ALPHA\nIS CAPITAL\n";  
-    else if(s>=97 && s<=122) 
-        cout<<"ALPHA\nIS SMALL\n";   
-    else if(s>=48 && s<=57)
-        cout<<"IS DIGIT"<<nl;
+    int tc; cin>>tc;
+    while(tc--){
+        int h,a;
+        cin>>h>>a;
+        
+    }    
+    cout<<cnt<<nl;
 }
 
 int32_t main() {
